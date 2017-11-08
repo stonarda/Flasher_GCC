@@ -1,7 +1,10 @@
+#include <stdint.h>
+#include "cmsis_gcc.h"
+#include "MKW41Z4.h"                    // Device header
 #include "FreeRTOS.h"
 #include "task.h"
 #include "Board_LED.h"
-#include "MKW41Z4.h"                    // Device header
+
 
 // Flashes LED 3 forever
 void toggleLed3(void* arg)

@@ -1,76 +1,80 @@
+##### Target #####
+TARGET_ARCH=armv6-m
+TARGET_FREQ=12000000
 
+##### Toolchain #####
 CC=arm-linux-gnueabi-gcc
+LINKER_SCRIPT:=linker_script.ld
+C_FLAGS=-march=$(TARGET_ARCH) -mthumb
 
-# Target Architecture
-ARCH=armv6-m
-MCU=cortex-m0plus
-F_CPU=12000000
+##### Useful Directories #####
+DIR_PROJECT:=.
+DIR_ARM_PACK:=../../ARM/PACK
 
-# Tool Options
-COMP_FLAGS=-march=$(ARCH) -mthumb
-#-mtune=$(MCU)
+##### Project #####
 
-# Searches current dirs for written files
-ASS_FILES := $(shell find -path "*" -type f -name "*.s")
-C_FILES := $(shell find -path "*" -type f -name "*.c")
-INCL_FILES := $(shell find -path "*" -type f -name "*.h")
+# Assembly
+ASS_FILES=$(shell find -path "$(DIR_PROJECT)/*" -type f -name "*.s")
 
-# Generic Paths
-ARM_PACK_DIR=../../ARM/PACK
+# Source
+SRC_FILES=$(shell find -path "$(DIR_PROJECT)/*" -type f -name "*.c")
 
-# RTE Components
-RTE_ABS_DIR=../Flasher_Keil/RTE
-DEVICE_DIR=/Device/MKW41Z512xxx4
-RTOS_DIR=/RTOS
-BOARD_DIR=/_NXPKW41Z
+# Include
+INCL_DIRS=$(DIR_PROJECT)/include
 
-ASS_FILES += $(shell find $(RTE_ABS_DIR)$(DEVICE_DIR) -type f -name "*.s")
-C_FILES += $(shell find $(RTE_ABS_DIR)$(DEVICE_DIR) -type f -name "*.c")
-INCL_FILES += $(shell find $(RTE_ABS_DIR)$(DEVICE_DIR) -type d)
+##### FreeRTOS #####
+DIR_RTOS=$(DIR_ARM_PACK)/ARM/CMSIS-FreeRTOS/9.1.0
 
-INCL_FILES += $(shell find $(RTE_ABS_DIR)$(RTOS_DIR) -type d)
-INCL_FILES += $(shell find $(RTE_ABS_DIR)$(BOARD_DIR) -type d)
+# Source
+SRC_FILES+=$(DIR_RTOS)/Source/portable/MemMang/heap_4.c
+SRC_FILES+=$(DIR_RTOS)/Source/croutine.c
+SRC_FILES+=$(DIR_RTOS)/Source/event_groups.c
+SRC_FILES+=$(DIR_RTOS)/Source/list.c
+SRC_FILES+=$(DIR_RTOS)/Source/queue.c
+SRC_FILES+=$(DIR_RTOS)/Source/tasks.c
+SRC_FILES+=$(DIR_RTOS)/Source/timers.c
+SRC_FILES+=$(DIR_RTOS)/Source/portable/GCC/ARM_CM0/port.c
 
-# RTOS Files
-RTOS_DIR=$(ARM_PACK_DIR)/ARM/CMSIS-FreeRTOS/9.1.0/CMSIS/RTOS2/FreeRTOS/Include
-RTOS_SRC_INCL_DIR=$(ARM_PACK_DIR)/ARM/CMSIS-FreeRTOS/9.1.0/Source/include
-RTOS_PORT_DIR=$(ARM_PACK_DIR)/ARM/CMSIS-FreeRTOS/9.1.0/Source/portable/RVDS/ARM_CM0
+# Include
+INCL_DIRS+=$(DIR_RTOS)/CMSIS/RTOS2/FreeRTOS/Include
+INCL_DIRS+=$(DIR_RTOS)/Source/include
+INCL_DIRS+=$(DIR_RTOS)/Source/portable/GCC/ARM_CM0
 
-INCL_FILES += $(shell find $(RTOS_DIR) -type d)
-INCL_FILES += $(shell find $(RTOS_SRC_INCL_DIR) -type d)
-INCL_FILES += $(shell find $(RTOS_PORT_DIR) -type d)
+##### DEVICE_SPECIFIC #####
+DIR_RTE=../Flasher_Keil/RTE
 
-RTOS_SRC_DIR=$(ARM_PACK_DIR)/ARM/CMSIS-FreeRTOS/9.1.0/Source
+# Assembly
+ASS_FILES+=$(shell find -path "$(DIR_RTE)/Device/MKW41Z512xxx4" -type f -name "*.c")
 
-C_FILES+=$(RTOS_SRC_DIR)/portable/MemMang/heap_4.c
-C_FILES+=$(RTOS_SRC_DIR)/croutine.c
-C_FILES+=$(RTOS_SRC_DIR)/event_groups.c
-C_FILES+=$(RTOS_SRC_DIR)/list.c
-C_FILES+=$(RTOS_SRC_DIR)/queue.c
-C_FILES+=$(RTOS_SRC_DIR)/tasks.c
-C_FILES+=$(RTOS_SRC_DIR)/timers.c
+# Source
+SRC_FILES+=$(shell find "$(DIR_RTE)/Device/MKW41Z512xxx4" -type f -name "*.c")
 
-# CMSIS Files
-CMSIS_DIR=$(ARM_PACK_DIR)/ARM/CMSIS/5.1.1/CMSIS/Include
+# Include
+INCL_DIRS+=$(DIR_RTE)/Device/MKW41Z512xxx4
+INCL_DIRS+=$(DIR_RTE)/RTOS
+INCL_DIRS+=$(DIR_RTE)/_NXPKW41Z
 
-INCL_FILES += $(CMSIS_DIR)
+##### CMSIS #####
 
-# Board Files
-INCL_FILES+=$(ARM_PACK_DIR)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Include
+# Include
+INCL_DIRS+=$(DIR_ARM_PACK)/ARM/CMSIS/5.1.1/CMSIS/Include
 
-# Middleware Files
-MID_FILES=$(ARM_PACK_DIR)/Keil/MDK-Middleware/7.4.1/Board
+##### Keil #####
 
-INCL_FILES += $(shell find $(MID_FILES) -type d)
+# Source
+SRC_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Boards/NXP/FRDM-KW41Z/Common/LED_FRDM-KW41Z.c
 
-# LED Files
-C_FILES+=$(ARM_PACK_DIR)/Keil/Kinetis_KWxx_DFP/1.7.0/Boards/NXP/FRDM-KW41Z/Common/LED_FRDM-KW41Z.c
+# Include
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetic_KWxx_DFP/7.4.1/Board
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil/MDK-Middleware/7.4.1/Board
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Include
 
-# Finalising the paths
-C_PATHS := $(sort $(C_FILES))
-INCL_PATHS := $(addprefix -I ,$(sort $(INCL_FILES)))
+##### Finalising #####
+SRC_PATHS:=$(sort $(SRC_FILES))
+INCL_PATHS:=$(addprefix -I, $(sort $(INCL_DIRS)))
 
+##### Compilation #####
 compile:
-	$(CC) $(COMP_FLAGS) $(C_PATHS) $(INCL_PATHS)
+	$(CC) $(INCL_PATHS) $(C_FLAGS) $(SRC_PATHS)
 
-print-%  : ; @echo $* = $($*)
+

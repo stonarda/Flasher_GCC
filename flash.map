@@ -1,0 +1,490 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+                              /tmp/ccjbsKno.o (memcpy)
+../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+                              /tmp/cc5stkWm.o (__aeabi_uidiv)
+../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+                              ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o) (__aeabi_idiv0)
+../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+                              ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o) (__aeabi_memcpy)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /tmp/ccaHTr3n.o
+ .data          0x0000000000000000        0x0 /tmp/ccaHTr3n.o
+ .bss           0x0000000000000000        0x0 /tmp/ccaHTr3n.o
+ .comment       0x0000000000000000       0x39 /tmp/ccaHTr3n.o
+ .ARM.attributes
+                0x0000000000000000       0x32 /tmp/ccaHTr3n.o
+ .text          0x0000000000000000        0x0 /tmp/ccIFpUhS.o
+ .data          0x0000000000000000        0x0 /tmp/ccIFpUhS.o
+ .bss           0x0000000000000000        0x0 /tmp/ccIFpUhS.o
+ .comment       0x0000000000000000       0x39 /tmp/ccIFpUhS.o
+ .ARM.attributes
+                0x0000000000000000       0x32 /tmp/ccIFpUhS.o
+ .text          0x0000000000000000      0x4d8 /tmp/ccyxAfSm.o
+ .data          0x0000000000000000        0x0 /tmp/ccyxAfSm.o
+ .bss           0x0000000000000000        0x0 /tmp/ccyxAfSm.o
+ .comment       0x0000000000000000       0x39 /tmp/ccyxAfSm.o
+ .ARM.attributes
+                0x0000000000000000       0x32 /tmp/ccyxAfSm.o
+ .data          0x0000000000000000        0x0 /tmp/cci8n7KR.o
+ .bss           0x0000000000000000        0x0 /tmp/cci8n7KR.o
+ .bss           0x0000000000000000        0x0 /tmp/cc5stkWm.o
+ .data          0x0000000000000000        0x0 /tmp/ccpg55rS.o
+ .rodata        0x0000000000000000        0x4 /tmp/ccpg55rS.o
+ .data          0x0000000000000000        0x0 /tmp/ccjbsKno.o
+ .bss           0x0000000000000000        0x0 /tmp/ccjbsKno.o
+ .data          0x0000000000000000        0x0 /tmp/ccEXcdNU.o
+ .data          0x0000000000000000        0x0 /tmp/cc9A2dAr.o
+ .data          0x0000000000000000        0x0 /tmp/ccpWEIBY.o
+ .bss           0x0000000000000000        0x0 /tmp/ccpWEIBY.o
+ .bss           0x0000000000000000        0x0 /tmp/ccoLNdRv.o
+ .text          0x0000000000000000        0x0 /tmp/cce36xh3.o
+ .data          0x0000000000000000        0x0 /tmp/cce36xh3.o
+ .bss           0x0000000000000000        0x0 /tmp/cce36xh3.o
+ .data          0x0000000000000000        0x0 /tmp/ccHwSy3A.o
+ .bss           0x0000000000000000        0x0 /tmp/ccHwSy3A.o
+ .text          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+ .data          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+ .text          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+ .data          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+ .bss           0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+ .text          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .data          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .bss           0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .text          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .data          0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memmove
+                0x0000000000000000       0x1c ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memset_lowlevel
+                0x0000000000000000       0x2a ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memclr
+                0x0000000000000000        0x6 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+ .text.__aeabi_memset
+                0x0000000000000000        0x8 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+PROGRAM_FLASH    0x0000000000000000 0x0000000000080000 xr
+SRAM             0x000000001fff8000 0x0000000000020000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccaHTr3n.o
+LOAD /tmp/ccIFpUhS.o
+LOAD /tmp/ccyxAfSm.o
+LOAD /tmp/cci8n7KR.o
+LOAD /tmp/cc5stkWm.o
+LOAD /tmp/ccpg55rS.o
+LOAD /tmp/ccjbsKno.o
+LOAD /tmp/ccEXcdNU.o
+LOAD /tmp/cc9A2dAr.o
+LOAD /tmp/ccpWEIBY.o
+LOAD /tmp/ccoLNdRv.o
+LOAD /tmp/cce36xh3.o
+LOAD /tmp/ccHwSy3A.o
+START GROUP
+LOAD ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_semihost_nf.a
+LOAD ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a
+LOAD ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a
+END GROUP
+                0x0000000000000000                __base_PROGRAM_FLASH = 0x0
+                0x0000000000000000                __base_Flash = 0x0
+                0x0000000000080000                __top_PROGRAM_FLASH = 0x80000
+                0x0000000000080000                __top_Flash = 0x80000
+                0x000000001fff8000                __base_SRAM = 0x1fff8000
+                0x000000001fff8000                __base_RAM = 0x1fff8000
+                0x0000000020018000                __top_SRAM = 0x20018000
+                0x0000000020018000                __top_RAM = 0x20018000
+
+.text           0x0000000000000000     0x40e0
+ FILL mask 0xff
+                0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000       0xc0 /tmp/cce36xh3.o
+                0x0000000000000000                __Vectors
+                0x0000000000000000                g_pfnVectors
+                0x00000000000000c0                . = ALIGN (0x4)
+                0x00000000000000c0                __section_table_start = .
+                0x00000000000000c0                __data_section_table = .
+                0x00000000000000c0        0x4 LONG 0x40e0 LOADADDR (.data)
+                0x00000000000000c4        0x4 LONG 0x1fff8000 ADDR (.data)
+                0x00000000000000c8        0x4 LONG 0x8 SIZEOF (.data)
+                0x00000000000000cc                __data_section_table_end = .
+                0x00000000000000cc                __bss_section_table = .
+                0x00000000000000cc        0x4 LONG 0x1fff8008 ADDR (.bss)
+                0x00000000000000d0        0x4 LONG 0x1158 SIZEOF (.bss)
+                0x00000000000000d4                __bss_section_table_end = .
+                0x00000000000000d4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors.init_data
+                0x00000000000000d4       0x40 /tmp/cce36xh3.o
+                0x00000000000000d4                data_init
+ .after_vectors.init_bss
+                0x0000000000000114       0x34 /tmp/cce36xh3.o
+                0x0000000000000114                bss_init
+ .after_vectors.reset
+                0x0000000000000148       0xa0 /tmp/cce36xh3.o
+                0x0000000000000148                ResetISR
+ .after_vectors
+                0x00000000000001e8      0x1b0 /tmp/cce36xh3.o
+                0x00000000000001e8                NMI_Handler
+                0x00000000000001f0                HardFault_Handler
+                0x0000000000000210                PIT_DriverIRQHandler
+                0x0000000000000210                DMA0_DriverIRQHandler
+                0x0000000000000210                SPI1_DriverIRQHandler
+                0x0000000000000210                LPTMR0_DriverIRQHandler
+                0x0000000000000210                PORTB_PORTC_DriverIRQHandler
+                0x0000000000000210                TRNG0_DriverIRQHandler
+                0x0000000000000210                TPM2_DriverIRQHandler
+                0x0000000000000210                TSI0_DriverIRQHandler
+                0x0000000000000210                RTC_Seconds_DriverIRQHandler
+                0x0000000000000210                LLWU_DriverIRQHandler
+                0x0000000000000210                MCG_DriverIRQHandler
+                0x0000000000000210                FTFA_DriverIRQHandler
+                0x0000000000000210                IntDefaultHandler
+                0x0000000000000210                DAC0_DriverIRQHandler
+                0x0000000000000210                TPM0_DriverIRQHandler
+                0x0000000000000210                LVD_LVW_DCDC_DriverIRQHandler
+                0x0000000000000210                Reserved20_DriverIRQHandler
+                0x0000000000000210                DMA3_DriverIRQHandler
+                0x0000000000000210                Radio_1_DriverIRQHandler
+                0x0000000000000210                CMT_DriverIRQHandler
+                0x0000000000000210                PORTA_DriverIRQHandler
+                0x0000000000000210                TPM1_DriverIRQHandler
+                0x0000000000000210                RTC_DriverIRQHandler
+                0x0000000000000210                DMA1_DriverIRQHandler
+                0x0000000000000210                I2C1_DriverIRQHandler
+                0x0000000000000210                LPUART0_DriverIRQHandler
+                0x0000000000000210                LTC0_DriverIRQHandler
+                0x0000000000000210                SPI0_DriverIRQHandler
+                0x0000000000000210                ADC0_DriverIRQHandler
+                0x0000000000000210                Radio_0_DriverIRQHandler
+                0x0000000000000210                CMP0_DriverIRQHandler
+                0x0000000000000210                DMA2_DriverIRQHandler
+                0x0000000000000210                I2C0_DriverIRQHandler
+                0x0000000000000218                DMA0_IRQHandler
+                0x0000000000000224                DMA1_IRQHandler
+                0x0000000000000230                DMA2_IRQHandler
+                0x000000000000023c                DMA3_IRQHandler
+                0x0000000000000248                Reserved20_IRQHandler
+                0x0000000000000254                FTFA_IRQHandler
+                0x0000000000000260                LVD_LVW_DCDC_IRQHandler
+                0x000000000000026c                LLWU_IRQHandler
+                0x0000000000000278                I2C0_IRQHandler
+                0x0000000000000284                I2C1_IRQHandler
+                0x0000000000000290                SPI0_IRQHandler
+                0x000000000000029c                TSI0_IRQHandler
+                0x00000000000002a8                LPUART0_IRQHandler
+                0x00000000000002b4                TRNG0_IRQHandler
+                0x00000000000002c0                CMT_IRQHandler
+                0x00000000000002cc                ADC0_IRQHandler
+                0x00000000000002d8                CMP0_IRQHandler
+                0x00000000000002e4                TPM0_IRQHandler
+                0x00000000000002f0                TPM1_IRQHandler
+                0x00000000000002fc                TPM2_IRQHandler
+                0x0000000000000308                RTC_IRQHandler
+                0x0000000000000314                RTC_Seconds_IRQHandler
+                0x0000000000000320                PIT_IRQHandler
+                0x000000000000032c                LTC0_IRQHandler
+                0x0000000000000338                Radio_0_IRQHandler
+                0x0000000000000344                DAC0_IRQHandler
+                0x0000000000000350                Radio_1_IRQHandler
+                0x000000000000035c                MCG_IRQHandler
+                0x0000000000000368                LPTMR0_IRQHandler
+                0x0000000000000374                SPI1_IRQHandler
+                0x0000000000000380                PORTA_IRQHandler
+                0x000000000000038c                PORTB_PORTC_IRQHandler
+                0x0000000000000400                . = 0x400
+ *fill*         0x0000000000000398       0x68 ff
+                0x0000000000000400                PROVIDE (__FLASH_CONFIG_START__, .)
+ *(.FlashConfig)
+ .FlashConfig   0x0000000000000400       0x10 /tmp/cce36xh3.o
+                0x0000000000000400                Flash_Config
+                0x0000000000000410                PROVIDE (__FLASH_CONFIG_END__, .)
+                0x0000000000000001                ASSERT (! ((__FLASH_CONFIG_START__ == __FLASH_CONFIG_END__)), Linker Flash Config Support Enabled, but no .FlashConfig section provided within application)
+ *(.text*)
+ .text          0x0000000000000410      0x150 /tmp/cci8n7KR.o
+                0x0000000000000410                vListInitialise
+                0x000000000000044c                vListInitialiseItem
+                0x0000000000000460                vListInsertEnd
+                0x00000000000004a4                vListInsert
+                0x0000000000000510                uxListRemove
+ .text          0x0000000000000560      0x224 /tmp/cc5stkWm.o
+                0x0000000000000560                pxPortInitialiseStack
+                0x00000000000005cc                SVC_Handler
+                0x0000000000000604                xPortStartScheduler
+                0x0000000000000648                vPortEndScheduler
+                0x0000000000000664                vPortYield
+                0x0000000000000680                vPortEnterCritical
+                0x00000000000006a0                vPortExitCritical
+                0x00000000000006cc                ulSetInterruptMaskFromISR
+                0x00000000000006d8                vClearInterruptMaskFromISR
+                0x00000000000006e0                PendSV_Handler
+                0x0000000000000724                SysTick_Handler
+ .text          0x0000000000000784      0x370 /tmp/ccpg55rS.o
+                0x0000000000000784                pvPortMalloc
+                0x00000000000008d0                vPortFree
+                0x000000000000095c                xPortGetFreeHeapSize
+                0x0000000000000970                xPortGetMinimumEverFreeHeapSize
+                0x0000000000000984                vPortInitialiseBlocks
+ .text          0x0000000000000af4      0xf20 /tmp/ccjbsKno.o
+                0x0000000000000af4                xQueueGenericReset
+                0x0000000000000b9c                xQueueGenericCreate
+                0x0000000000000c7c                xQueueCreateMutex
+                0x0000000000000cb8                xQueueGiveMutexRecursive
+                0x0000000000000d10                xQueueTakeMutexRecursive
+                0x0000000000000d74                xQueueCreateCountingSemaphore
+                0x0000000000000dbc                xQueueGenericSend
+                0x0000000000000f70                xQueueGenericSendFromISR
+                0x0000000000001080                xQueueGiveFromISR
+                0x0000000000001170                xQueueGenericReceive
+                0x0000000000001340                xQueueReceiveFromISR
+                0x0000000000001408                xQueuePeekFromISR
+                0x000000000000148c                uxQueueMessagesWaiting
+                0x00000000000014b8                uxQueueSpacesAvailable
+                0x00000000000014ec                uxQueueMessagesWaitingFromISR
+                0x0000000000001510                vQueueDelete
+                0x000000000000176c                xQueueIsQueueEmptyFromISR
+                0x00000000000017cc                xQueueIsQueueFullFromISR
+                0x0000000000001800                vQueueWaitForMessageRestricted
+                0x0000000000001870                xQueueCreateSet
+                0x0000000000001894                xQueueAddToSet
+                0x00000000000018d8                xQueueRemoveFromSet
+                0x0000000000001920                xQueueSelectFromSet
+                0x000000000000194c                xQueueSelectFromSetFromISR
+ .text          0x0000000000001a14     0x193c /tmp/ccEXcdNU.o
+                0x0000000000001a14                xTaskCreate
+                0x0000000000001c5c                vTaskDelete
+                0x0000000000001d20                vTaskDelayUntil
+                0x0000000000001dd4                vTaskDelay
+                0x0000000000001e1c                eTaskGetState
+                0x0000000000001ed8                uxTaskPriorityGet
+                0x0000000000001f0c                uxTaskPriorityGetFromISR
+                0x0000000000001f48                vTaskPrioritySet
+                0x0000000000002068                vTaskSuspend
+                0x000000000000217c                vTaskResume
+                0x0000000000002214                xTaskResumeFromISR
+                0x00000000000022cc                vTaskStartScheduler
+                0x0000000000002348                vTaskEndScheduler
+                0x0000000000002360                vTaskSuspendAll
+                0x0000000000002378                xTaskResumeAll
+                0x0000000000002490                xTaskGetTickCount
+                0x00000000000024ac                xTaskGetTickCountFromISR
+                0x00000000000024cc                uxTaskGetNumberOfTasks
+                0x00000000000024e0                pcTaskGetName
+                0x0000000000002514                xTaskIncrementTick
+                0x000000000000267c                vTaskSwitchContext
+                0x000000000000271c                vTaskPlaceOnEventList
+                0x0000000000002754                vTaskPlaceOnUnorderedEventList
+                0x00000000000027ac                vTaskPlaceOnEventListRestricted
+                0x00000000000027f4                xTaskRemoveFromEventList
+                0x00000000000028ac                xTaskRemoveFromUnorderedEventList
+                0x000000000000295c                vTaskSetTimeOutState
+                0x000000000000298c                xTaskCheckForTimeOut
+                0x0000000000002a28                vTaskMissedYield
+                0x0000000000002bbc                xTaskGetCurrentTaskHandle
+                0x0000000000002bd8                xTaskGetSchedulerState
+                0x0000000000002c10                vTaskPriorityInherit
+                0x0000000000002ccc                xTaskPriorityDisinherit
+                0x0000000000002d84                uxTaskResetEventItemValue
+                0x0000000000002db0                pvTaskIncrementMutexHeldCount
+                0x0000000000002dd4                ulTaskNotifyTake
+                0x0000000000002e58                xTaskNotifyWait
+                0x0000000000002f00                xTaskGenericNotify
+                0x0000000000003018                xTaskGenericNotifyFromISR
+                0x000000000000316c                vTaskNotifyGiveFromISR
+                0x000000000000325c                xTaskNotifyStateClear
+ .text          0x0000000000003350      0x6e8 /tmp/cc9A2dAr.o
+                0x0000000000003350                xTimerCreateTimerTask
+                0x00000000000033a4                xTimerCreate
+                0x0000000000003434                xTimerGenericCommand
+                0x00000000000034e0                xTimerGetTimerDaemonTaskHandle
+                0x0000000000003500                xTimerGetPeriod
+                0x0000000000003524                xTimerGetExpiryTime
+                0x000000000000354c                pcTimerGetName
+                0x00000000000039a8                xTimerIsTimerActive
+                0x00000000000039dc                pvTimerGetTimerID
+                0x0000000000003a0c                vTimerSetTimerID
+ .text          0x0000000000003a38      0x1b8 /tmp/ccpWEIBY.o
+                0x0000000000003a38                LED_Initialize
+                0x0000000000003b20                LED_Uninitialize
+                0x0000000000003b2c                LED_On
+                0x0000000000003b64                LED_Off
+                0x0000000000003b9c                LED_SetOut
+                0x0000000000003be4                LED_GetCount
+ .text          0x0000000000003bf0      0x248 /tmp/ccoLNdRv.o
+                0x0000000000003bf0                SystemInit
+                0x0000000000003c08                SystemCoreClockUpdate
+ .text          0x0000000000003e38      0x138 /tmp/ccHwSy3A.o
+                0x0000000000003e38                toggleLed3
+                0x0000000000003e64                toggleLed2
+                0x0000000000003e90                toggleLed1
+                0x0000000000003eb4                toggleLed0
+                0x0000000000003ed8                main
+ .text.memcpy   0x0000000000003f70        0x8 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+                0x0000000000003f70                memcpy
+ .text.__aeabi_division_idivmod
+                0x0000000000003f78       0x78 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+                0x0000000000003f78                __aeabi_idiv
+                0x0000000000003f78                __aeabi_idivmod
+                0x0000000000003f7e                __aeabi_uidiv
+                0x0000000000003f7e                __aeabi_uidivmod
+ .text.__aeabi_division_idiv0
+                0x0000000000003ff0        0x2 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000003ff0                __aeabi_idiv0
+ .text.__aeabi_memcpy
+                0x0000000000003ff2       0x2c ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)
+                0x0000000000003ff2                __aeabi_memcpy
+                0x0000000000003ff2                __aeabi_memcpy4
+                0x0000000000003ff2                __aeabi_memcpy8
+ *(.rodata .rodata.* .constdata .constdata.*)
+ *fill*         0x000000000000401e        0x2 ff
+ .rodata        0x0000000000004020       0x30 /tmp/ccEXcdNU.o
+ .rodata        0x0000000000004050       0x30 /tmp/cc9A2dAr.o
+ .rodata        0x0000000000004080       0x30 /tmp/ccpWEIBY.o
+                0x0000000000004080                led_pin
+                0x0000000000004090                led_port
+                0x00000000000040a0                led_gpio
+ .rodata        0x00000000000040b0       0x2f /tmp/ccHwSy3A.o
+                0x00000000000040e0                . = ALIGN (0x4)
+ *fill*         0x00000000000040df        0x1 ff
+
+.glue_7         0x00000000000040e0        0x0
+ .glue_7        0x00000000000040e0        0x0 linker stubs
+
+.glue_7t        0x00000000000040e0        0x0
+ .glue_7t       0x00000000000040e0        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000040e0        0x0
+ .vfp11_veneer  0x00000000000040e0        0x0 linker stubs
+
+.v4_bx          0x00000000000040e0        0x0
+ .v4_bx         0x00000000000040e0        0x0 linker stubs
+
+.iplt           0x00000000000040e0        0x0
+ .iplt          0x00000000000040e0        0x0 /tmp/ccyxAfSm.o
+
+.rel.dyn        0x00000000000040e0        0x0
+ .rel.iplt      0x00000000000040e0        0x0 /tmp/ccyxAfSm.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000000000040e0                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000000000040e0                __exidx_end = .
+                0x00000000000040e0                _etext = .
+
+.mtb_buffer_default
+ *(.mtb*)
+
+.uninit_RESERVED
+                0x000000001fff8000        0x0
+ *(.bss.$RESERVED*)
+                0x000000001fff8000                . = ALIGN (0x4)
+                0x000000001fff8000                _end_uninit_RESERVED = .
+
+.data           0x000000001fff8000        0x8 load address 0x00000000000040e0
+ FILL mask 0xff
+                0x000000001fff8000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+ .data          0x000000001fff8000        0x4 /tmp/cc5stkWm.o
+ .data          0x000000001fff8004        0x4 /tmp/ccoLNdRv.o
+                0x000000001fff8004                SystemCoreClock
+                0x000000001fff8008                . = ALIGN (0x4)
+                0x000000001fff8008                _edata = .
+
+.igot.plt       0x000000001fff8008        0x0 load address 0x00000000000040e8
+ .igot.plt      0x000000001fff8008        0x0 /tmp/ccyxAfSm.o
+
+.bss            0x000000001fff8008     0x1158 load address 0x00000000000040e8
+                0x000000001fff8008                _bss = .
+ *(.bss*)
+ .bss           0x000000001fff8008     0x1018 /tmp/ccpg55rS.o
+ .bss           0x000000001fff9020      0x104 /tmp/ccEXcdNU.o
+                0x000000001fff9020                pxCurrentTCB
+ .bss           0x000000001fff9124       0x3c /tmp/cc9A2dAr.o
+ *(COMMON)
+                0x000000001fff9160                . = ALIGN (0x4)
+                0x000000001fff9160                _ebss = .
+                [!provide]                        PROVIDE (end, .)
+
+.noinit         0x000000001fff9160        0x0 load address 0x00000000000040e8
+                0x000000001fff9160                _noinit = .
+ *(.noinit*)
+                0x000000001fff9160                . = ALIGN (0x4)
+                0x000000001fff9160                _end_noinit = .
+
+.heap           0x000000001fff9160     0x1000 load address 0x00000000000040e8
+                0x000000001fff9160                _pvHeapStart = .
+                0x000000001fffa160                . = (. + 0x1000)
+ *fill*         0x000000001fff9160     0x1000 
+                0x000000001fffa160                . = ALIGN (0x4)
+                0x000000001fffa160                _pvHeapLimit = .
+
+.heap2stackfill
+                0x000000001fffa160     0x1000 load address 0x00000000000040e8
+                0x000000001fffb160                . = (. + 0x1000)
+ *fill*         0x000000001fffa160     0x1000 
+
+.stack          0x0000000020017000        0x0
+                0x0000000020017000                _vStackBase = .
+                0x0000000020017000                . = ALIGN (0x4)
+                0x0000000020018000                _vStackTop = (. + 0x1000)
+OUTPUT(Flash.axf elf32-littlearm)
+
+.comment        0x0000000000000000       0xa6
+ .comment       0x0000000000000000       0x38 /tmp/cci8n7KR.o
+                                         0x39 (size before relaxing)
+ .comment       0x0000000000000038       0x39 /tmp/cc5stkWm.o
+ .comment       0x0000000000000038       0x39 /tmp/ccpg55rS.o
+ .comment       0x0000000000000038       0x39 /tmp/ccjbsKno.o
+ .comment       0x0000000000000038       0x39 /tmp/ccEXcdNU.o
+ .comment       0x0000000000000038       0x39 /tmp/cc9A2dAr.o
+ .comment       0x0000000000000038       0x39 /tmp/ccpWEIBY.o
+ .comment       0x0000000000000038       0x39 /tmp/ccoLNdRv.o
+ .comment       0x0000000000000038       0x39 /tmp/cce36xh3.o
+ .comment       0x0000000000000038       0x39 /tmp/ccHwSy3A.o
+ .comment       0x0000000000000038       0x6e ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+                                         0x6f (size before relaxing)
+
+.ARM.attributes
+                0x0000000000000000       0x30
+ .ARM.attributes
+                0x0000000000000000       0x32 /tmp/cci8n7KR.o
+ .ARM.attributes
+                0x0000000000000032       0x32 /tmp/cc5stkWm.o
+ .ARM.attributes
+                0x0000000000000064       0x32 /tmp/ccpg55rS.o
+ .ARM.attributes
+                0x0000000000000096       0x32 /tmp/ccjbsKno.o
+ .ARM.attributes
+                0x00000000000000c8       0x32 /tmp/ccEXcdNU.o
+ .ARM.attributes
+                0x00000000000000fa       0x32 /tmp/cc9A2dAr.o
+ .ARM.attributes
+                0x000000000000012c       0x32 /tmp/ccpWEIBY.o
+ .ARM.attributes
+                0x000000000000015e       0x32 /tmp/ccoLNdRv.o
+ .ARM.attributes
+                0x0000000000000190       0x32 /tmp/cce36xh3.o
+ .ARM.attributes
+                0x00000000000001c2       0x32 /tmp/ccHwSy3A.o
+ .ARM.attributes
+                0x00000000000001f4       0x31 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m/libcr_c.a(memcpy.o)
+ .ARM.attributes
+                0x0000000000000225       0x21 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_32.o)
+ .ARM.attributes
+                0x0000000000000246       0x21 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+ .ARM.attributes
+                0x0000000000000267       0x21 ../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m/libcr_eabihelpers.a(memcpy.o)

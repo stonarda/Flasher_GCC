@@ -1,15 +1,26 @@
+
+ASS_FILES=
+INCL_DIRS=
+SRC_FILES=
+
+OUTPUT_NAME="Flash"
+
 ##### Target #####
 TARGET_ARCH=armv6-m
 TARGET_FREQ=12000000
 
 ##### Toolchain #####
-CC=arm-linux-gnueabi-gcc
-LINKER_SCRIPT:=linker_script.ld
-C_FLAGS=-march=$(TARGET_ARCH) -mthumb
+CC=arm-none-eabi-gcc
+LINKER_SCRIPT:=flash_Debug.ld
+C_FLAGS=-march=$(TARGET_ARCH) -mcpu=cortex-m0plus -mthumb -nostdlib -Xlinker --gc-sections -Xlinker -Map="flash.map" -Xlinker -print-memory-usage -T $(LINKER_SCRIPT) -o "$(OUTPUT_NAME).axf"
+
+C_FLAGS+= -L../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m
+C_FLAGS+= -L../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m
 
 ##### Useful Directories #####
 DIR_PROJECT:=.
 DIR_ARM_PACK:=../../ARM/PACK
+DIR_BUILD=$(DIR_PROJECT)/__build
 
 ##### Project #####
 
@@ -24,50 +35,42 @@ INCL_DIRS=$(DIR_PROJECT)/include
 
 ##### FreeRTOS #####
 DIR_RTOS=$(DIR_ARM_PACK)/ARM/CMSIS-FreeRTOS/9.1.0
-
-# Source
-SRC_FILES+=$(DIR_RTOS)/Source/portable/MemMang/heap_4.c
-SRC_FILES+=$(DIR_RTOS)/Source/croutine.c
-SRC_FILES+=$(DIR_RTOS)/Source/event_groups.c
-SRC_FILES+=$(DIR_RTOS)/Source/list.c
-SRC_FILES+=$(DIR_RTOS)/Source/queue.c
-SRC_FILES+=$(DIR_RTOS)/Source/tasks.c
-SRC_FILES+=$(DIR_RTOS)/Source/timers.c
-SRC_FILES+=$(DIR_RTOS)/Source/portable/GCC/ARM_CM0/port.c
+DIR_RTOS_SRC=$(DIR_RTOS)/Source
 
 # Include
-INCL_DIRS+=$(DIR_RTOS)/CMSIS/RTOS2/FreeRTOS/Include
 INCL_DIRS+=$(DIR_RTOS)/Source/include
 INCL_DIRS+=$(DIR_RTOS)/Source/portable/GCC/ARM_CM0
+INCL_DIRS+=$(DIR_RTOS)/CMSIS/RTOS2/FreeRTOS/Include
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil.Kinetis_KWxx_DFP/1.7.0/Device/Include
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Source
+INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Source/ARM
 
-##### DEVICE_SPECIFIC #####
-DIR_RTE=../Flasher_Keil/RTE
+# Source
+SRC_FILES+=$(DIR_RTOS_SRC)/timers.c
+SRC_FILES+=$(DIR_RTOS_SRC)/tasks.c
+SRC_FILES+=$(DIR_RTOS_SRC)/queue.c
+SRC_FILES+=$(DIR_RTOS_SRC)/portable/GCC/ARM_CM0/port.c
+SRC_FILES+=$(DIR_RTOS_SRC)/portable/MemMang/heap_4.c
+SRC_FILES+=$(DIR_RTOS_SRC)/list.c
+SRC_FILES+=$(DIR_RTOS_SRC)/event_groups.c
+SRC_FILES+=$(DIR_ARM_PACK)/ARM/CMSIS-FreeRTOS/9.1.0/CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
+SRC_FILES+=$(DIR_RTOS_SRC)/croutine.c
+
+##### Board #####
 
 # Assembly
-ASS_FILES+=$(shell find -path "$(DIR_RTE)/Device/MKW41Z512xxx4" -type f -name "*.c")
+#ASS_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Source/ARM/startup_MKW41Z4.s
 
-# Source
-SRC_FILES+=$(shell find "$(DIR_RTE)/Device/MKW41Z512xxx4" -type f -name "*.c")
-
-# Include
-INCL_DIRS+=$(DIR_RTE)/Device/MKW41Z512xxx4
-INCL_DIRS+=$(DIR_RTE)/RTOS
-INCL_DIRS+=$(DIR_RTE)/_NXPKW41Z
-
-##### CMSIS #####
-
-# Include
-INCL_DIRS+=$(DIR_ARM_PACK)/ARM/CMSIS/5.1.1/CMSIS/Include
-
-##### Keil #####
-
-# Source
-SRC_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Boards/NXP/FRDM-KW41Z/Common/LED_FRDM-KW41Z.c
-
-# Include
-INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetic_KWxx_DFP/7.4.1/Board
+#Include
 INCL_DIRS+=$(DIR_ARM_PACK)/Keil/MDK-Middleware/7.4.1/Board
 INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Include
+INCL_DIRS+=$(DIR_ARM_PACK)/ARM/CMSIS/5.1.1/CMSIS/Include
+
+#Source
+SRC_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Source/system_MKW41Z4.c
+SRC_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Boards/NXP/FRDM-KW41Z/Common/LED_FRDM-KW41Z.c
+
+SRC_FILES+=../Flasher_Xpresso/startup/startup_mkw41z4.c
 
 ##### Finalising #####
 SRC_PATHS:=$(sort $(SRC_FILES))
@@ -76,5 +79,9 @@ INCL_PATHS:=$(addprefix -I, $(sort $(INCL_DIRS)))
 ##### Compilation #####
 compile:
 	$(CC) $(INCL_PATHS) $(C_FLAGS) $(SRC_PATHS)
+	arm-none-eabi-size "$(OUTPUT_NAME).axf"
 
-
+#arm-none-eabi-objcopy -v -O binary "$(OUTPUT_NAME).axf" "flash.bin"
+	
+print-%:
+	@echo '$*=$($*)'

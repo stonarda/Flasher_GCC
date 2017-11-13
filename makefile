@@ -14,13 +14,13 @@ CC=arm-none-eabi-gcc
 LINKER_SCRIPT:=flash_Debug.ld
 C_FLAGS=-march=$(TARGET_ARCH) -mcpu=cortex-m0plus -mthumb -nostdlib -Xlinker --gc-sections -Xlinker -Map="flash.map" -Xlinker -print-memory-usage -T $(LINKER_SCRIPT) -o "$(OUTPUT_NAME).axf"
 
-C_FLAGS+= -L../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m
-C_FLAGS+= -L../../../MCUXpressoIDE_10.0.2_411/nxp/ide/tools/arm-none-eabi/lib/armv6-m
+C_FLAGS+= -L../../../nxp/MCUXpressoIDE_10.0.2_411/ide/tools/lib/gcc/arm-none-eabi/5.4.1/armv6-m
+C_FLAGS+= -L../../../nxp/MCUXpressoIDE_10.0.2_411/ide/tools/arm-none-eabi/lib/armv6-m
 
 ##### Useful Directories #####
 DIR_PROJECT:=.
 DIR_ARM_PACK:=../../ARM/PACK
-DIR_BUILD=$(DIR_PROJECT)/__build
+DIR_JLINK:=../../../jlink
 
 ##### Project #####
 
@@ -58,9 +58,6 @@ SRC_FILES+=$(DIR_RTOS_SRC)/croutine.c
 
 ##### Board #####
 
-# Assembly
-#ASS_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Source/ARM/startup_MKW41Z4.s
-
 #Include
 INCL_DIRS+=$(DIR_ARM_PACK)/Keil/MDK-Middleware/7.4.1/Board
 INCL_DIRS+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Device/Include
@@ -72,16 +69,23 @@ SRC_FILES+=$(DIR_ARM_PACK)/Keil/Kinetis_KWxx_DFP/1.7.0/Boards/NXP/FRDM-KW41Z/Com
 
 SRC_FILES+=../Flasher_Xpresso/startup/startup_mkw41z4.c
 
-##### Finalising #####
+##### Finalise Compilation #####
 SRC_PATHS:=$(sort $(SRC_FILES))
 INCL_PATHS:=$(addprefix -I, $(sort $(INCL_DIRS)))
 
+##### JLink Script #####
+JLINK_EXE_PATH=$(DIR_JLINK)/JLinkExe
+JLINK_SCRIPT_PATH=jlink_Script.jlink
+
+JLINK_FLAGS=-if swd -device MKW41Z512xxx4 -speed 4000 -CommanderScript $(JLINK_SCRIPT_PATH)
+
+
 ##### Compilation #####
-compile:
+all: compile flash
+
+compile: $(SRC_FILES)
 	$(CC) $(INCL_PATHS) $(C_FLAGS) $(SRC_PATHS)
 	arm-none-eabi-size "$(OUTPUT_NAME).axf"
-
-#arm-none-eabi-objcopy -v -O binary "$(OUTPUT_NAME).axf" "flash.bin"
 	
-print-%:
-	@echo '$*=$($*)'
+flash: compile
+	./$(JLINK_EXE_PATH) $(JLINK_FLAGS)

@@ -1,0 +1,4 @@
+h
+loadbin Flash.axf, 0
+r
+q
